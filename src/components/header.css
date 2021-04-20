@@ -1,0 +1,18 @@
+.header {
+  height: 60px;
+  width: 100vw;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.links{
+  margin-right: 150px;
+}
+
+.linksExternos {
+  margin-right: 40px;
+  color: #2687E8;
+  font-size: 18px;
+  font-weight: bolder;
+}

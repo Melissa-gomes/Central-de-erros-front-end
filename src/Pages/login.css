@@ -1,0 +1,89 @@
+body {
+  height: 100%;
+  margin: 0%;
+  background-image: url('../imgs/aaaaaa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  position: absolute;
+  width: 400px;
+  height: 480px;
+  left: 749px;
+  top: 120px;
+  background: #F7F7F7;
+  opacity: 0.95;
+  border: 2px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./Roboto-Thin.ttf');
+}
+
+.login h2 {
+  color: #2687E8;
+  font-family: Roboto;
+  margin-left: 40px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
+.inputLogin {
+width: 320px;
+height: 35px;
+margin-left: 40px;
+left: 818px;
+top: 438px;
+
+background: #FFFFFF;
+border: 1px solid #9E9E9E;
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.descrip {
+  margin-left: 45px;
+  color: #656565;
+  font-weight: bolder;
+}
+
+.button {
+  height: 40px;
+  width: 250px;
+  color: #F6F6F6;
+  font-size: 16px;
+  background-color: #2687E8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  margin-left: 80px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.logo {
+  height: 40px;
+  width: 290px;
+  margin-top: -110px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.login a {
+  margin-left: 80px;
+  margin-top: 30px;
+  color: #2687E8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+

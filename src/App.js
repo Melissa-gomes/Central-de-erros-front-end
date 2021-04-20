@@ -1,12 +1,14 @@
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Login from './Pages/login';
+import cadastro from './Pages/cadastro';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                Central de erros!
-      </header>
-        </div>
+        <Switch>
+            <Route exact path="/" component={ Login } />
+            <Route exact path="/cadastro" component={ cadastro } />
+        </Switch>
     );
 }
 
