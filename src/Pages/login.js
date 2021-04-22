@@ -18,9 +18,7 @@ class Login extends React.Component {
     const { email, senha } = this.state;
       const requestOptions = {
         method: 'POST',
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-        },
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
         body: `grant_type=password&username=${ email }&password=${ senha }&scope=password` +
           `&client_id=codenation&client_secret=123`,
       }
