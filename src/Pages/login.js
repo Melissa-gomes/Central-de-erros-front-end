@@ -14,29 +14,25 @@ class Login extends React.Component {
     this.submitFetch = this.submitFetch.bind(this);
   }
 
-  submitFetch() {
+  async submitFetch() {
     const { email, senha } = this.state;
-    const URL = 'http://localhost:8080/oauth/token';
-
-    const CLIENT = {
-      ID: 'codenation',
-      SECRET: '123',
-    };
-
-    fetch(URL, {
-      body: `grant_type=password&username=${email}&password=${senha}&scope=password&client_id=${CLIENT.ID}&client_secret=${CLIENT.SECRET}`,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      },
-      method: "POST"
-    })
-      .then(data => data.json())
-      .then(data => console.log(data));
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+        },
+        body: `grant_type=password&username=${ email }&password=${ senha }&scope=password` +
+          `&client_id=codenation&client_secret=123`,
+      }
+      const request = await fetch('http://localhost:8080/oauth/token', requestOptions);
+      const response = await request.json();
+      console.log(response);
+      return response;
+    
   }
 
   handleChange({ target }) {
     const { name, value } = target;
-    console.log(name, value);
     this.setState({ [name]: value });
   }
 
@@ -73,7 +69,7 @@ class Login extends React.Component {
             >
               Entrar
             </button>
-            <a href="/qualquercoisa">Não tem uma conta? Experimente grátis!</a>
+            <a href="/cadastro">Não tem uma conta? Experimente grátis!</a>
         </div>
       </div>
     )
