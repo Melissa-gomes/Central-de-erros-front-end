@@ -1,13 +1,13 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Login from './Pages/login';
-import cadastro from './Pages/cadastro';
+import Cadastro from './Pages/PageCad';
 
 function App() {
     return (
         <Switch>
             <Route exact path="/" component={ Login } />
-            <Route exact path="/cadastro" component={ cadastro } />
+            <Route exact path="/qualquercoisa" component={ Cadastro } />
         </Switch>
     );
 }

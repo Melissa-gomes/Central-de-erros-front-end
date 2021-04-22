@@ -6,9 +6,9 @@ class Header extends React.Component {
       <div>
         <div className="header">
           <div className="links">
-          <a className="linksExternos" href="/gitHub">GitHub</a>
+          <a className="linksExternos" href="https://github.com/danwhat/codenation-central-de-erros">GitHub</a>
           <a className="linksExternos" href="/Doc">Doc. Swagger</a>
-          <a className="linksExternos" href="/about">Sobre nós</a>
+          <a className="linksExternos" href="https://contaazul.com">Sobre nós</a>
           </div>
         </div>
       </div>
