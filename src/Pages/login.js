@@ -15,22 +15,23 @@ class Login extends React.Component {
   }
 
   submitFetch() {
-    const formData = new FormData();
-    formData.append('username', this.state.email);
-    formData.append('password', this.state.senha);
-    formData.append('grant_type', 'password');
+    const { email, senha } = this.state;
+    const URL = 'http://localhost:8080/oauth/token';
 
-    const myInit = { 
-      method: 'POST',
-      headers: {'Content-Type': 'multipart/form-data'},
-      body: formData
-    }
+    const CLIENT = {
+      ID: 'codenation',
+      SECRET: '123',
+    };
 
-    const results = fetch('http://localhost:8080/oauth/token', myInit)
-    .then((response) => console.log(response.json()))
-    .catch((error) => console.log(`deu algum erro: ${error}`));
-    //console.log(results);
-    return results;
+    fetch(URL, {
+      body: `grant_type=password&username=${email}&password=${senha}&scope=password&client_id=${CLIENT.ID}&client_secret=${CLIENT.SECRET}`,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      method: "POST"
+    })
+      .then(data => data.json())
+      .then(data => console.log(data));
   }
 
   handleChange({ target }) {

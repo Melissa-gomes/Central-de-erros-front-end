@@ -32,11 +32,9 @@ class Cadastro extends React.Component {
       })
     }
 
-    const results = fetch('http://localhost:8080/users', myInit)
+    return fetch('http://localhost:8080/users', myInit)
     .then((response) => console.log('PARABENS DEU TOD CERTO -----',response.json()))
     .catch((error) => console.log(`deu algum erro: ${error}`));
-    //console.log(results);
-    return results;
   }
 
   render(){
