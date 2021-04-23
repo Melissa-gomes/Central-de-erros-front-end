@@ -9,10 +9,12 @@ class Cadastro extends React.Component {
     this.state = {
       name: '',
       email: '',
-      senha: ''
+      senha: '',
+      formError: false,
     }
     this.handleChange = this.handleChange.bind(this);
     this.submitFetch = this.submitFetch.bind(this);
+    this.redirecionamento = this.redirecionamento.bind(this);
   }
 
   handleChange({ target }) {
@@ -33,8 +35,22 @@ class Cadastro extends React.Component {
     }
 
     return fetch('http://localhost:8080/users', myInit)
-    .then((response) => console.log('PARABENS DEU TOD CERTO -----',response.json()))
+    .then((response) => {
+      console.log(response);
+      if(response.ok) {
+        response.json()
+        this.redirecionamento()
+      } else {
+        this.setState({ formError: true })
+      }
+    } )
     .catch((error) => console.log(`deu algum erro: ${error}`));
+  }
+
+  redirecionamento() {
+    return(
+      this.props.history.push('/successfulCad')
+    )
   }
 
   render(){
@@ -73,6 +89,7 @@ class Cadastro extends React.Component {
             className="inputLogin"
             onChange={ this.handleChange }
           />
+          { this.state.formError && <span className="span">Todos os campos precisam ser preenchidos</span> }
           <button
             type="button"
             className="button"
