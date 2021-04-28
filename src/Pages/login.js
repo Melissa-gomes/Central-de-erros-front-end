@@ -26,7 +26,6 @@ class Login extends React.Component {
       const response = await request.json();
       console.log(response);
       return response;
-    
   }
 
   handleChange({ target }) {
