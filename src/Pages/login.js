@@ -19,10 +19,10 @@ class Login extends React.Component {
       const requestOptions = {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-        body: `grant_type=password&username=${ email }&password=${ senha }&scope=password` +
+        body: `grant_type=password&username=${email}&password=${senha}&scope=password` +
           `&client_id=codenation&client_secret=123`,
       }
-      const request = await fetch('http://localhost:8080/oauth/token', requestOptions);
+      const request = await fetch('https://cors-anywhere.herokuapp.com/https://codenation-central-de-erros-ca.herokuapp.com/oauth/token', requestOptions);
       const response = await request.json();
       console.log(response);
       return response;
