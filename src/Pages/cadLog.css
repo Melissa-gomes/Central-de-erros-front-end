@@ -1,0 +1,83 @@
+.logo {
+  height: 40px;
+  width: 290px;
+  margin-top: -110px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('./Roboto-Thin.ttf');
+}
+
+.addLog {
+  margin-left: 70px;
+  margin-top: 25px;
+  color: #2687E8;
+  font-size: 30px;
+  font-family: Roboto;
+}
+
+.containerInputs{
+  width: 60vw;
+  height: 60vh;
+  margin-left: 70px;
+}
+
+
+.inputCad1 {
+  width: 250px;
+  height: 35px;
+  background: #FFFFFF;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+  color: #5B6979;
+}
+
+.inputCad2 {
+  width: 765px;
+  height: 35px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+  color: #5B6979;
+}
+
+.inputCad3 {
+  width: 765px;
+  height: 180px;
+  background: #FFFFFF;
+  margin-top: 8px;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+  color: #5B6979;
+}
+
+.buttonLog{
+  height: 40px;
+  width: 170px;
+  color: #F6F6F6;
+  font-size: 16px;
+  background-color: #2687E8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.divsoria{
+  background-color: #DFDFDF;
+  height: 5px;
+  margin-top: -10px;
+}

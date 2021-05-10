@@ -1,7 +1,7 @@
-.bodyS {
+.bodyL {
   height: 100%;
   margin: 0%;
-  background-image: url('../imgs/res.jpg');
+  background-image: url('../imgs/sid.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 40%;
@@ -9,7 +9,7 @@
   height: 100vh;
 }
 
-.abc {
+.ac {
   position: absolute;
   width: 700px;
   height: 300px;
@@ -28,21 +28,21 @@
 }
 
 .h2 {
-  margin-left: 150px;
+  margin-left: 120px;
   margin-top: 40px;
   color: #2687E8;
   font-family: Roboto;
   font-size: 28px;
 }
 
-.ccc {
-  margin-left: 200px;
+.h4 {
+  margin-left: 120px;
   margin-top: 40px;
   font-size: 20px;
   color: #656565;
 }
 
-.abc button {
+.ac button {
   height: 40px;
   width: 250px;
   color: #F6F6F6;

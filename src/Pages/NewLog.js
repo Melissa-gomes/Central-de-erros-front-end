@@ -1,9 +1,9 @@
-import React from  'react';
-import './successCad.css';
+import React from 'react';
+import './NewLog.css';
 import Header from '../components/header';
 import abgg from '../imgs/abgg.png';
 
-class successfulCad extends React.Component {
+class NewLog extends React.Component {
   constructor(props) {
     super(props);
 
@@ -12,25 +12,25 @@ class successfulCad extends React.Component {
 
   redirecionamento() {
     return(
-      this.props.history.push('/')
+      this.props.history.push('/allLog')
     )
   }
 
   render(){
     return(
-      <div className="bodyS">
+      <div className="bodyL">
         <Header />
         <img className="logo" src={abgg} />
-        <div className="abc">
-          <h2 className="h2">Cadastro Realizado com Sucesso!</h2>
-          <h4 className="ccc">Agora retorne para fazer o login</h4>
+        <div className="ac">
+          <h2 className="h2">Novo Log Cadastrado com Sucesso!</h2>
+          <h4 className="h4">Click no botão a baixo para retornar a lista de Logs</h4>
           <button
             onClick={ this.redirecionamento }
-          >Fazer Login</button>
+          >Retornar aos Logs</button>
         </div>
       </div>
     )
   }
-}
+};
 
-export default successfulCad;
+export default NewLog;

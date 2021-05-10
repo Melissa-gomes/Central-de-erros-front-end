@@ -1,0 +1,92 @@
+.logs {
+  color: #2687E8;
+  font-family: Roboto;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
+.filters{
+  width: 94vw;
+  margin-left: 40px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.typeOne {
+  width: 230px;
+  height: 35px;
+  color: #5B6979;
+  background: #FFFFFF;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.typeT {
+  width: 360px;
+  height: 35px;
+  color: #5B6979;
+  background: #FFFFFF;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.btn {
+  height: 34px;
+  width: 170px;
+  color: #F6F6F6;
+  font-size: 16px;
+  background-color: #2687E8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.topic {
+  color: #2687E8;
+}
+
+.tableLog{
+  margin-top: 12px;
+  width: 94vw;
+}
+
+.table{
+  display: flex;
+  justify-content: center;
+}
+
+.topic {
+  margin: 8px;
+}
+
+.btnNewLog {
+  height: 34px;
+  width: 170px;
+  color: #F6F6F6;
+  font-size: 16px;
+  background-color: #2687E8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-left: 500px;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.divsoria{
+  background-color: #DFDFDF;
+  height: 5px;
+  margin-top: -10px;
+}
