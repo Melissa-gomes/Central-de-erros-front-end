@@ -107,3 +107,5 @@ class allLogs extends React.Component {
 };
 
 export default allLogs;
+
+
