@@ -7,13 +7,13 @@ class CadLog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 'warning',
+      level: '',
       description: '',
       log: '',
       origin: '',
       quantity: 0,
     }
-
+    this.submitFetch = this.submitFetch.bind(this);
     this.myToken = this.myToken.bind(this);
   }
 
@@ -23,27 +23,29 @@ class CadLog extends React.Component {
     return myToken;
   }
 
-  async submitFetch() {
-    const authHeaders = new Headers();
+  async submitFetch () {
+   const authHeaders = new Headers();
     authHeaders.append("Authorization", `bearer ${this.myToken()}`);
-        const requestOptions = {
-          method: 'POST',
-          headers: authHeaders,
-          body: JSON.stringify({
-            'level': this.state.level,
-            'description': this.state.description,
-            'log': this.state.log,
-            'origin': this.state.origin,
-            'quantity': this.state.quantity
-          }),
-          redirect: 'follow'
-        };
-        fetch("https://codenation-central-de-erros-ca.herokuapp.com/logs", requestOptions)
-          .then(response => response.json())
-          .then(response => console.log(response))
-          .catch(err => console.error(err));
-  }
+    authHeaders.append('Content-Type', 'application/json')
+    const myInit = { 
+      method: 'POST',
+      headers: authHeaders,
+      body: JSON.stringify({
+        'level': this.state.level,
+        'description': this.state.description,
+        'log': this.state.log,
+        'origin': this.state.origin,
+        'date': new Date(Date.now()).toISOString(),
+        'quantity': this.state.quantity
+      }),
+      redirect: 'follow'
+    }
 
+    return fetch('https://codenation-central-de-erros-ca.herokuapp.com/logs', myInit)
+    .then(response => response.json())
+      .then(response => this.props.history.push('/successfulNewLog'))
+      .catch(err => console.error(err))
+  }
   render(){
     const { level, description, log, origin, quantity } = this.state;
     return(
@@ -60,9 +62,9 @@ class CadLog extends React.Component {
             value={level}
             onClick={ ({ target }) => this.setState({level: target.value}) }
           >
-            <option>Error</option>
-            <option>Warning</option>
-            <option>Info</option>
+            <option value='Error'>Error</option>
+            <option value='Warning'>Warning</option>
+            <option value='Info'>Info</option>
           </select>
             <input
               type="text"
@@ -108,5 +110,5 @@ class CadLog extends React.Component {
     )
   }
 };
-//()=> this.props.history.push('/successfulNewLog')
+//()=> 
 export default CadLog;

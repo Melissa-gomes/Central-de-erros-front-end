@@ -31,7 +31,7 @@ class allLogs extends React.Component {
       headers: authHeaders,
       redirect: 'follow'
     };
-    fetch("https://codenation-central-de-erros-ca.herokuapp.com/logs?search=level:wwwww", requestOptions)
+    fetch("https://codenation-central-de-erros-ca.herokuapp.com/logs?page=1", requestOptions)
       .then(response => response.json())
       .then(response => this.setState({ myLogs: response.content}))
       .catch(err => console.error(err))
