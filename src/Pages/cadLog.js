@@ -15,6 +15,11 @@ class CadLog extends React.Component {
     }
     this.submitFetch = this.submitFetch.bind(this);
     this.myToken = this.myToken.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({...this.state, [event.target.name]: event.target.value});
   }
 
   myToken() {
@@ -59,9 +64,9 @@ class CadLog extends React.Component {
           <select
             className="inputCad1" 
             name="level" 
-            value={level}
-            onClick={ ({ target }) => this.setState({level: target.value}) }
+            value={this.state.level} onChange={this.handleChange}
           >
+            
             <option value='Error'>Error</option>
             <option value='Warning'>Warning</option>
             <option value='Info'>Info</option>
