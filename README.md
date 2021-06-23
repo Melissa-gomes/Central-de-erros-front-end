@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+## Central de erros Front-end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi desenvolvido para a aceleração de JAVA da qual participei.
+Aqui irá encontrar a parte de front-end que esta sendo consumida em tempo real de um deploy na plataforma da Heroku. 
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+#### O que é a aplicação:
 
-### `npm start`
+É o front-end para uma central que cadastra erros em um api, podendo filtra-los, cadastra-los e ordena-los como preferir por seus campos. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+#### Tecnologias usadas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### O Front-end
+  * Foi desenvolvido usando React
+  * React Router Dom 
 
-### `npm run build`
+##### O Back-end
+  * Foi desenvolvido em Java (mais detalhes no repositorio do back-end).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  [Link do Repositorio do back-end.](https://github.com/Melissa-gomes/Central-de-erros-back-end)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Telas desenvolvidas:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### *Login*
 
-### `npm run eject`
+<img src='./forReadme/Login.jpg' alt='Login'>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### *Cadastro de Usuario*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src='./forReadme/CadastroUser.jpg' alt='Cadastro de Usuario'>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### *Retorno de um Cadastro bem sucedido*
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src='./forReadme/cadUserSucess.jpg' alt='Retorno de um Cadastro bem sucedido'>
 
-## Learn More
+#### *Tabela com todos os logs de erros*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src='./forReadme/allLog.jpg' alt='Tabela com todos os logs de erros'>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### *Cadastro de um novo log*
 
-### Code Splitting
+<img src='./forReadme/cadLog.jpg' alt='Cadastro de um novo log'>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### *Retorno de um log cadastrado com sucesso*
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src='./forReadme/newLogSucess.jpg' alt='Retorno de um log cadastrado com sucesso'>
